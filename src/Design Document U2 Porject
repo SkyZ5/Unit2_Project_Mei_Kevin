@@ -15,7 +15,7 @@ Holds values that will be defined in the constructor:
 Constructor:
 public linearEquation(int x1, int x2, int y1, int y2)
 	Will set all the values of the instance variables
-Will also call multiple methods to calculate the slope, y intercept, and distance of points
+    Will also call multiple methods to calculate the slope, y intercept, and distance of points
 
 Methods:
 	public string toString()
@@ -26,42 +26,54 @@ Methods:
 			Linear equation
 			Distance between the two points
 	public double calcuateSlope()
-Will calculate the slope:
-Take the absolute value of y1 - y2 divided by the absolute value of x1 - x2
+        Will calculate the slope:
+        Take the absolute value of y1 - y2 divided by the absolute value of x1 - x2
 
-To keep the slope in fraction form don’t actually divide them but instead store as a variable with the two values separated by a “/”
+        To keep the slope in fraction form don’t actually divide them but instead store as a variable with the two values separated by a “/”
 
-Round to nearest hundredth
+        Round to nearest hundredth
 
 	public double calcuateYInterecept()
 Will calculate the y intercept:
 	Take the coordinates of x1,y1
 
 	Calculate the y intercept by using y1 = m(x1) + b
-In general this means that m * x1 then subtract that from y1(y1 - m(x1))
+        In general this means that m * x1 then subtract that from y1(y1 - m(x1))
 
-			Round to nearest hundredth
+		Round to nearest hundredth
 
 	public double calculateDistance()
-Will calculate the distance between the two coordinates
-	Similar to finding the hypotenuse of a triangle,
-take the absolute value of x1-x2 and y1-y2, square both sides, add them together, then square root the answer. (sqrt((y1-y2)^2 + (x1-x2)^2))
+        Will calculate the distance between the two coordinates
+	    Similar to finding the hypotenuse of a triangle,
+        take the absolute value of x1-x2 and y1-y2, square both sides, add them together, then square root the answer. (sqrt((y1-y2)^2 + (x1-x2)^2))
 
-Round to nearest hundredth
+        Round to nearest hundredth
 
-	public string returnCoordinate(double x)
-Returns a string with the coordinate associated to the x value provided as it relates to the linear equation
-Multiply x by the slope and then add the y intercept.
+	public String returnCoordinate(double x)
+        Returns a string with the coordinate associated to the x value provided as it relates to the linear equation
+        Multiply x by the slope and then add the y intercept.
 
-Return as a string in coordinate format (x3, y3)
+        Return as a string in coordinate format (x3, y3)
 
-Round to nearest hundredth
+        Round to nearest hundredth
+
+    public String formattedString()
+        Returns a string with the format required
+        Using conditional statements find if:
+            Fraction can be turned into a whole number
+            If slope is exactly one
+            If slope is negative making sure the first number is the negative in the slope fraction
+            If both values are negative then negate the negative symbol
+            If the y intercept is 0 then remove it from the equation
+            If the y intercept is negative then subtract instead of adding a negative number
 
 
 EquationRunner.java
 Use the Scanner class to ask to get user inputs
 
 Get x1, x2, y1, y2
+Use indexOf to find the location of ( , )
+Using this information get the numbers in between with subString
 
 Create the linearEquation object providing the values needed in the parameters
 
