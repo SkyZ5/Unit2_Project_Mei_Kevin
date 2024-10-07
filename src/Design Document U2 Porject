@@ -25,7 +25,7 @@ Methods:
 			Y intercept
 			Linear equation
 			Distance between the two points
-	public double calcuateSlope()
+	public double calculateSlope()
         Will calculate the slope:
         Take the absolute value of y1 - y2 divided by the absolute value of x1 - x2
 
@@ -33,7 +33,7 @@ Methods:
 
         Round to nearest hundredth
 
-	public double calcuateYInterecept()
+	public double calculateYIntercept()
 Will calculate the y intercept:
 	Take the coordinates of x1,y1
 
