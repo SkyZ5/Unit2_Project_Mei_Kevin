@@ -43,19 +43,12 @@ public class LinearEquation {
 
     }
     public String formattedString() {
-        boolean fractionIsWhole;
-        boolean slopeIsOne;
-        boolean slopeIsNegative;
-        boolean bothValuesAreNegative;
-        boolean yInterceptIsZero;
-        boolean yInterceptIsNegative;
-
-        fractionIsWhole = slopeNumerator % slopeDenominator == 0;
-        slopeIsOne = Math.abs(slope) == 1;
-        slopeIsNegative = slope < 0;
-        bothValuesAreNegative = slopeNumerator < 0 & slopeDenominator < 0;
-        yInterceptIsZero = yIntercept == 0;
-        yInterceptIsNegative = yIntercept < 0;
+        boolean fractionIsWhole = slopeNumerator % slopeDenominator == 0;
+        boolean slopeIsOne = Math.abs(slope) == 1;
+        boolean slopeIsNegative = slope < 0;
+        boolean bothValuesAreNegative = slopeNumerator < 0 & slopeDenominator < 0;
+        boolean yInterceptIsZero = yIntercept == 0;
+        boolean yInterceptIsNegative = yIntercept < 0;
 
         if (slopeIsNegative) {
             stringSlope = "-" + Math.abs(slopeNumerator) + "/" + Math.abs(slopeDenominator);
