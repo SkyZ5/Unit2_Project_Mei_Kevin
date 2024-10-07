@@ -22,8 +22,8 @@ public class LinearEquation {
 
     }
     public double calculateSlope() {
-        this.slopeDenominator = Math.abs(x1 - x2);
-        this.slopeNumerator = Math.abs(y1 - y2);
+        this.slopeDenominator = x2 - x1;
+        this.slopeNumerator = y2 - y1;
         this.stringSlope = slopeNumerator + "/" + slopeDenominator;
         return Math.round(((double)slopeNumerator / slopeDenominator) * 1000.0) / 1000.0;
     }

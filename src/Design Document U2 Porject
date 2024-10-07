@@ -7,10 +7,10 @@ private int x2
 private int y1
 private int y2
 Holds values that will be defined in the constructor:
-	private double yIntercept
-	private double slope
-	private String stringSlope
-	private double distance
+    private double yIntercept
+    private double slope
+    private String stringSlope
+    private double distance
 
 Constructor:
 public linearEquation(int x1, int x2, int y1, int y2)
