@@ -25,21 +25,21 @@ public class LinearEquation {
         this.slopeDenominator = x2 - x1;
         this.slopeNumerator = y2 - y1;
         this.stringSlope = slopeNumerator + "/" + slopeDenominator;
-        return Math.round(((double)slopeNumerator / slopeDenominator) * 1000.0) / 1000.0;
+        return Math.round(((double)slopeNumerator / slopeDenominator) * 100.0) / 100.0;
     }
 
     public double calculateYIntercept() {
-        return Math.round((y1 - (x1 * slope)) * 1000.0) / 1000.0;
+        return Math.round((y1 - (x1 * slope)) * 100.0) / 100.0;
     }
     public double calculateDistance() {
-        return Math.round((Math.sqrt(Math.pow(((double)x1 - x2), 2) + Math.pow(((double)y1 - y2), 2))) * 1000.0) / 1000.0;
+        return Math.round((Math.sqrt(Math.pow(((double)x1 - x2), 2) + Math.pow(((double)y1 - y2), 2))) * 100.0) / 100.0;
     }
     public String toString() {
         return "First Pair: (" + x1 + "," + y1 + ") \nSecond Pair: (" + x2 + "," + y2 + ") " + "\nSlope of Line: " + slope + "\nY intercept: " + yIntercept + "\nSlope intercept form: " + formattedString() + "\nDistance between the two points: " + distance;
 
     }
     public String returnCoordinate(double x) {
-        return "(" + x + "," + (Math.round(((slope * x) + yIntercept) * 1000.0) / 1000.0) + ")";
+        return "(" + x + "," + (Math.round(((slope * x) + yIntercept) * 100.0) / 100.0) + ")";
 
     }
     public String formattedString() {
